@@ -274,7 +274,7 @@ Docker Compose는 2014년 12월에 첫 번째 버전으로 출시되었습니다
   - restart: 컨테이너가 종료될 때 자동으로 다시 시작하도록 설정 (always는 항상 재시작하도록 지정).
 
 2. 실행
-   Docker-compose를 사용하면 정말 진보되었다는 것을 알 수 있습니다. 유의할 점은 컨테이너를 만들 때 Docker만 사용하는 것과는 명령어가 달라진 졌다는 것입니다.
+   Docker-compose를 사용하면 정말 진보되었다는 것을 알 수 있습니다. 유의할 점은 컨테이너를 만들 때 Docker만 사용하는 것과는 명령어가 달라졌다는 것입니다.
    ```shell
    sudo docker-compose up -d  # 데몬으로 실행
    sudo docker-compose down   # 중지
