@@ -110,9 +110,9 @@ apache2와 mysqld가 각각 RUNNING 상태에 있으며, 1초 이상 실행된 �
 sudo docker run -p "80:80" --name lamp -d -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest-1804
 ```
 명령어 설명
-- <span style="background-color: #424242; padding: 0 5px;">--name lamp</span>: 도커는 컨테이너를 만들면 추후에 접근하기 쉽도록 임의의 이름을 붙혀줍니다. 하지만 그 이름이 우리가 쉽게 유추할 수 없는 이름입니다. 예를 들면 eager_fermat 같은 이름이 생성됩니다. 따라서 우리가 직접 이름을 붙혀줍니다. -가 두개인 것을 유의하세요.
+- <span style="background-color: #424242; padding: 0 5px;">---name lamp</span>: 도커는 컨테이너를 만들면 추후에 접근하기 쉽도록 임의의 이름을 붙혀줍니다. 하지만 그 이름이 우리가 쉽게 유추할 수 없는 이름입니다. 예를 들면 eager_fermat 같은 이름이 생성됩니다. 따라서 우리가 직접 이름을 붙혀줍니다. -가 두개인 것을 유의하세요.
 
-- <span style="background-color: #424242; padding: 0 5px;">-d</span>: 도커를 데몬으로 실행시킨다는 의미입니다. 도커를 대몬으로 실행시키지 않으면 쉘이 잠겨 있기 때문에 우리는 쉘에서 아무것도 할 수 없습니다. 따라서 데몬으로 실행합니다.
+- <span style="background-color: #424242; padding: 0 5px;">-d</span>: 도커를 데몬으로 실행시킨다는 의미입니다. 도커를 데몬으로 실행시키지 않으면 쉘이 잠겨 있기 때문에 우리는 쉘에서 아무것도 할 수 없습니다. 따라서 데몬으로 실행합니다.
 
 실습을 위해 두가지 명령을 중간에 사용해보겠습니다.
 
@@ -197,7 +197,7 @@ Dockerfile은 나중에 Docker 0.7 버전(2013년 말)에 도입되었습니다.
 
 4. 아까보다 뭔가 할일은 많아지고 파일도 하나 생기고 더 복잡해지기만 했지 장점이 안보입니다. 하지만 이걸 활용하면 아래와 같은걸 할 수 있습니다. 컨테이너 내부에서 명령어를 실행하고 파일을 카피하거나 라이브러리를 다운로드하고 환경변수를 설정할 수 있습니다.
 
-    이걸 Dockerfile 없이 위와 같은 명령문으로 이 작업을 하려면 컨테이너를 띄우고 직접 컨테이너 안으로 들어가서 이 작업을 해줘야합니다. 그래서 당장은 필요을지 몰라도 결국엔 쓰게 됩니다.
+    이걸 Dockerfile 없이 위와 같은 명령문으로 이 작업을 하려면 컨테이너를 띄우고 직접 컨테이너 안으로 들어가서 이 작업을 해줘야합니다. 그래서 당장은 필요 없을지 몰라도 결국엔 쓰게 됩니다.
 
 
     ```dockerfile
@@ -264,7 +264,7 @@ Docker Compose는 2014년 12월에 첫 번째 버전으로 출시되었습니다
           - ./mysql:/var/lib/mysql
         restart: always
     ```
-  설명:
+  설명:  
   - version: Compose 파일의 버전 (version: '3'은 Docker Compose에서 권장되는 최신 버전 중 하나입니다).
   - services: 여러 컨테이너를 정의하는 섹션입니다. 여기서는 lamp 서비스 하나만 있습니다.
   - image: 사용할 Docker 이미지 (mattrayner/lamp:latest-1804).
