@@ -2,7 +2,7 @@
 layout: post
 title: Cookie & Session
 description: Cookie & Session
-date: 2024-11-01 16:00:00 +0900
+date: 2024-11-01 11:00:00 +0900
 categories: [Technical Concepts Summarized]
 tags: [session, cookie]
 pin: false
