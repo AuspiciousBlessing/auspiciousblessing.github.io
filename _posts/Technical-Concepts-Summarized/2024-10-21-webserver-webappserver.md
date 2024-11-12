@@ -10,7 +10,6 @@ math: false
 mermaid: false
 image:
   path: commons/webapp.png
-  alt: HTTP(Hypertext Transfer Protocol)
 ---
 <!-- categories: [Technical Concepts Summarized, Technical Labs, Technical Terms, Useful Apps To Help With Technology] -->
 
